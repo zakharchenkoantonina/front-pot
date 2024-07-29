@@ -1,0 +1,29 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": [
+    "./env.d.ts",
+    "../backend/interfaces/**/*",
+    "**/*",
+    "**/*.vue"
+  ],
+  "exclude": [
+    "**/__tests__/*"
+  ],
+  "compilerOptions": {
+    "rootDir": "..",
+    "lib": ["ESNext", "DOM"],
+    "esModuleInterop": true,
+    "moduleResolution": "Node",
+    "module": "ESNext",
+    "strict": true,
+    "strictNullChecks": true,
+    "noEmit": true,
+    "noImplicitThis": true,
+    "composite": true,
+    "baseUrl": "..",
+    "paths": {
+      "@/*": ["./frontend/*"],
+      "@api/*": ["./backend/interfaces/*"]
+    }
+  }
+}
